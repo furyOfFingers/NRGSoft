@@ -1,0 +1,31 @@
+@import '../../assets/mixins.styl'
+@import '../../assets/variables.styl'
+
+.container-picker
+  padding 30px
+
+.picker
+  position relative
+  width 80px
+  margin 10px 0px
+  padding 10px 8px
+  text-align center
+  background-color $color-bg
+  font-family sans-serif
+  color $color-text
+  border-radius 4px
+  animation flowHereAndBack 10s infinite alternate
+  &:hover
+    cursor pointer
+    background-color $color-hover-bg
+
+.paused-flow
+  animationPlayStateCB(paused);
+
+@keyframes flowHereAndBack
+  0%
+    animation-timing-function ease-in-out
+    left 0px
+  100%
+    animation-timing-function ease-in-out
+    left 95%
